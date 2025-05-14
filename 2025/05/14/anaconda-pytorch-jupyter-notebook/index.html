@@ -25,22 +25,27 @@
     <!-- meta -->
 
 
-<title>My first blog | Hexo</title>
+<title>anaconda + pytorch + jupyter notebook | Hexo</title>
 
+
+    <meta name="keywords" content="tech">
 
 
 
 
     <!-- OpenGraph -->
  
-    <meta property="og:type" content="article">
-<meta property="og:title" content="My first blog">
-<meta property="og:url" content="http://example.com/2025/05/12/My-first-blog/index.html">
+    <meta name="description" content="今天跟着小土堆搭环境，但小土堆是21年的视频，一些命令已经不适用了。conda install nb_conda要求python&lt;3.9，而jupyter notebook中import torch要求python&gt;&#x3D;3.9 以下是解决方案： 123456789101112131415161718192021#在anaconda中创建环境conda create -n pyt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="anaconda + pytorch + jupyter notebook">
+<meta property="og:url" content="http://example.com/2025/05/14/anaconda-pytorch-jupyter-notebook/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="今天跟着小土堆搭环境，但小土堆是21年的视频，一些命令已经不适用了。conda install nb_conda要求python&lt;3.9，而jupyter notebook中import torch要求python&gt;&#x3D;3.9 以下是解决方案： 123456789101112131415161718192021#在anaconda中创建环境conda create -n pyt">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-05-12T13:06:14.000Z">
-<meta property="article:modified_time" content="2025-05-12T13:06:14.985Z">
+<meta property="article:published_time" content="2025-05-14T12:52:11.000Z">
+<meta property="article:modified_time" content="2025-05-14T13:19:39.809Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="tech">
 <meta name="twitter:card" content="summary_large_image">
 
 
@@ -115,10 +120,10 @@
 
 <div class="post-title">
     <h1 class="post-title__text">
-        My first blog
+        anaconda + pytorch + jupyter notebook
     </h1>
     <div class="post-title__meta">
-        <a href="/archives/2025/05/" class="post-meta__date button">2025-05-12</a>
+        <a href="/archives/2025/05/" class="post-meta__date button">2025-05-14</a>
         
  
         
@@ -137,41 +142,33 @@
 <article class="post content-card">
     <div class="post__header"></div>
     <div class="post__content">
-        
+        <p>今天跟着小土堆搭环境，但小土堆是21年的视频，一些命令已经不适用了。<br><code>conda install nb_conda</code>要求python&lt;3.9，而jupyter notebook中<code>import torch</code>要求python&gt;&#x3D;3.9</p>
+<p>以下是解决方案：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#在anaconda中创建环境</span><br><span class="line">conda create -n pytorch python=3.12</span><br><span class="line"></span><br><span class="line">#进入创建的pytorch环境中</span><br><span class="line">conda activate pytorch</span><br><span class="line"></span><br><span class="line">#安装pytorch</span><br><span class="line">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118</span><br><span class="line"></span><br><span class="line">#安装jupyter notebook</span><br><span class="line">conda install jupyter</span><br><span class="line">conda install nb_conda_kernels #不要安装 nb_conda!</span><br><span class="line"></span><br><span class="line">#安装ipykernel包</span><br><span class="line">conda install ipykernel</span><br><span class="line"></span><br><span class="line">#把当前环境pytorch添加到jupyter notebook内核列表中</span><br><span class="line">python -m ipykernel install --user --name=pytorch</span><br><span class="line"></span><br><span class="line">#启动jupyter notebook</span><br><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<p>![添加pytorch成功](C:\Users\thinkbook14\Pictures\log\屏幕截图 2025-05-14 210844.png)</p>
+<p>![成功import torch](C:\Users\thinkbook14\Pictures\log\屏幕截图 2025-05-14 210949.png)</p>
+
     </div>
      
-    <div class="post-footer__meta"><p>updated at 2025-05-12</p></div> 
-    <div class="post-entry__tags"></div> 
+    <div class="post-footer__meta"><p>updated at 2025-05-14</p></div> 
+    <div class="post-entry__tags"><a href="/tags/tech/" class="post-tags__link button"># tech</a></div> 
 </article>
 
 
     <div class="nav">
         <div class="nav__prev">
             
-                <a href="/2025/05/13/ML-2022spring-note1/" class="nav__link">
-                    <div>
-                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
-                    </div>
-                    <div>
-                        <div class="nav__label">
-                            Previous Post
-                        </div>
-                        <div class="nav__title">
-                            ML 2022spring note1
-                        </div>
-                    </div>
-                </a>
-            
         </div>
         <div class="nav__next">
             
-                <a href="/2025/05/12/hello-world/" class="nav__link">
+                <a href="/2025/05/13/ML-2022spring-note1/" class="nav__link">
                     <div>
                         <div class="nav__label">
                             Next Post
                         </div>
                         <div class="nav__title">
-                            Hello World
+                            ML 2022spring note1
                         </div>
                     </div>
                     <div>
